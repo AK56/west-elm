@@ -1,6 +1,4 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
-import Product from './Product'
 import ProductList from './ProductList'
 
 let products = [
@@ -54,7 +52,7 @@ describe('<ProductList />', () => {
     expect(wrapper.find('Col').length).toBe(2)
   })
   it('renders Product with right props', () => {
-    const target = wrapper.find(Product).at(0).props()
+    const target = wrapper.find('Product').at(0).props()
     expect(target.name).toEqual('product1')
     expect(target.lowPrice).toBe(75)
     expect(target.highPrice).toBe(100)

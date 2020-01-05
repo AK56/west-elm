@@ -1,14 +1,30 @@
 import React from 'react'
-const Product = ({name, lowPrice, highPrice, hero, thumbnail}) => {
-  let styles = {
-    backgroundImage: `url(${hero.href})`,
+import CarouselModal from './CarouselModal'
+class Product extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showCarousel: false
+    }
   }
-  return (
-    <div className="hero-image" style={styles}>
-      <label className="hero-name">{name}</label>
-      <b className="hero-price">${lowPrice} - ${highPrice}</b>
-    </div>
-  )
+  closeCarousel = () => this.setState({showCarousel: false})
+  openCarousel = () => this.setState({showCarousel: true})
+
+  render() {
+    const { name, lowPrice, highPrice, hero, thumbnail } = this.props
+    let styles = {
+      backgroundImage: `url(${hero.href})`,
+    }
+    return (
+      <React.Fragment>
+        <div className="hero-image" style={styles} onClick={this.openCarousel}>
+          <label className="hero-name">{name}</label>
+          <b className="hero-price">${lowPrice} - ${highPrice}</b>
+        </div>
+        <CarouselModal show={this.state.showCarousel} closeCarousel={this.closeCarousel} thumbnail={thumbnail} />
+      </React.Fragment>
+    )
+  }
 }
 
 export default Product

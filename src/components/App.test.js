@@ -1,7 +1,4 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { Container, Row } from 'react-bootstrap'
-import ProductList from './ProductList'
 import App from './App'
 
 let goodJSON = {
