@@ -1,6 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-The project is consuming JSON off (https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json) poured in a local file due to Cross Origin Domain policies set by the westelm, thereby not allowing the apps to directly to fetch the JSON
-and other resources. The App renders Product details including name, price and main image. Also carousal overlay is interfaced displaying rest of product images.
+### West Elm Products
+
+The project lists home products consuming off of JSON (https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json)
+The App renders Product details including name, price and main image. Also carousal overlay is interfaced displaying rest of product images.
+The app is Accessibile and SEO dosage has been injected.
 
 You can checkout this repo and start running locally. Go to the project root, make sure you have yarn install, if not follow directions [here](https://yarnpkg.com/lang/en/docs/install/).
 Once you have yarn running on your machine, do a
