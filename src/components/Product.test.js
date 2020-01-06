@@ -22,11 +22,18 @@ describe('<Product />', () => {
   it('intiliazes showCarousel state with false', () => {
     expect(wrapper.instance().state.showCarousel).toEqual(false)
   })
-  it('renders a div with class hero-image to wrap the product', () => {
-    expect(wrapper.find('div').hasClass('hero-image')).toEqual(true)
-  })
-  it('sets the div background to product hero image', () => {
-    expect(wrapper.find('div.hero-image').prop('style')).toHaveProperty('backgroundImage', 'url(image1.png)')
+  describe('hero-image', () => {
+    let heroImage = wrapper.find('div.hero-image')
+    it('renders a div with class hero-image to wrap the product', () => {
+      expect(heroImage.length).toBe(1)
+    })
+    it('sets the div background to product hero image', () => {
+      expect(heroImage.prop('style')).toHaveProperty('backgroundImage', 'url(image1.png)')
+    })
+    it('sets showCarousel state to true when hero iamge is clicked', () => {
+      heroImage.simulate('click')
+      expect(wrapper.instance().state.showCarousel).toEqual(true)
+    })
   })
   it('renders a label with product name', () => {
     expect(wrapper.find('label.hero-name').text()).toEqual('name1')

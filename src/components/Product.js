@@ -17,9 +17,9 @@ class Product extends React.Component {
     }
     return (
       <React.Fragment>
-        <div className="hero-image" style={styles} onClick={this.openCarousel}>
+        <div className="hero-image" style={styles} onClick={this.openCarousel} aria-label="Main Product Image">
           <label className="hero-name">{name}</label>
-          <b className="hero-price">${lowPrice} - ${highPrice}</b>
+          <b className="hero-price" aria-label="Product Price Range">${lowPrice} - ${highPrice}</b>
         </div>
         <CarouselModal show={this.state.showCarousel} closeCarousel={this.closeCarousel} thumbnail={thumbnail} />
       </React.Fragment>

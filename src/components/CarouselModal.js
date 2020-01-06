@@ -4,10 +4,10 @@ import CarouselImage from './CarouselImage'
 const CarouselModal = ({show, closeCarousel, thumbnail}) => {
   return show ? (
     <Modal show={show} onHide={closeCarousel}>
-      <Modal.Header closeButton>
+      <Modal.Header closeButton bsPrefix="carousel-modal-header">
       </Modal.Header>
 
-      <Modal.Body>
+      <Modal.Body bsPrefix="carousel-modal-body">
         <CarouselImage thumbnail={thumbnail} />
       </Modal.Body>
     </Modal>
