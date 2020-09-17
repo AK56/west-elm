@@ -10,9 +10,9 @@ const ProductList = ({products}) => {
     const hero = product.hero
     const thumbnail = product.images
     return (
-      <Col xs={12} md={4}>
+      <Col xs={12} md={4} key={index.toString()}>
         <Product
-          key={index}
+          key={index.toString()}
           name={name}
           lowPrice={lowPrice}
           highPrice={highPrice}

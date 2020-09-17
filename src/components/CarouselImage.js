@@ -5,9 +5,9 @@ const CarouselImage = ({thumbnail}) => {
     <Carousel>
       {thumbnail.map((image, index) => {
         return (
-          <Carousel.Item>
+          <Carousel.Item key={index.toString()}>
             <img
-              key={index}
+              key={index.toString()}
               className="d-block w-100"
               src={image.href}
               alt="Product thumbnail"
