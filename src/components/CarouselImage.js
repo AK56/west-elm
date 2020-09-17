@@ -10,7 +10,7 @@ const CarouselImage = ({thumbnail}) => {
               key={index}
               className="d-block w-100"
               src={image.href}
-              alt="Product thumbnail image"
+              alt="Product thumbnail"
             />
           </Carousel.Item>
         )
